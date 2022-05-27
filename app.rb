@@ -18,7 +18,7 @@ get "/balrog" do
 end
 
 get "/cat" do
-  "<div>
-    <img src='https://i.imgur.com/jFaSxym.png'>
+  "<div style='border: 3px dashed red'>
+    <img src='http://placekitten.com/500/500'>
   </div>"
 end
