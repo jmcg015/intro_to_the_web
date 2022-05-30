@@ -9,14 +9,7 @@ get "/secret" do
   "Keep it secret. Keep it safe!"
 end
 
-get "/moria" do
-  "Speak friend and enter"
-end
-
-get "/balrog" do
-  "YOU SHALL NOT PASS!"
-end
-
 get "/cat" do
+  @name = %w(Amigo Misty Almond).sample
   erb(:index)
 end
