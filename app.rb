@@ -9,7 +9,13 @@ get "/secret" do
   "Keep it secret. Keep it safe!"
 end
 
-get "/cat" do
+get "/random-cat" do
   @name = %w(Amigo Misty Almond).sample
   erb(:index)
+end
+
+get "/named-cat" do
+  p params
+  @name = params[:name]
+  erb :index
 end
