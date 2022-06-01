@@ -1,3 +1,6 @@
+<% if @game.player_1.hit_points == 0 || @game.player_2.hit_points == 0 %>
+<%= @game.current_turn.name %> loses
+<% else %>
 <%= @game.player_1.name %> vs. <%= @game.player_2.name %>
 <p>
 <%= @game.player_1.name %>: <%= @game.player_1.hit_points %>HP
@@ -5,6 +8,7 @@
 <%= @game.player_2.name %>: <%= @game.player_2.hit_points %>HP
 <p>
 <%= @game.current_turn.name %>'s turn
+<% end %>
 
 <form action="/attack">
   <input type="submit" value="Attack">
